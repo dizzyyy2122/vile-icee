@@ -1,0 +1,104 @@
+Free jc
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dark Flicker Page</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      color: white;
+      font-family: 'Courier New', Courier, monospace;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+    }
+
+    @keyframes flicker {
+      0% { opacity: 1; }
+      5% { opacity: 0.4; }
+      10% { opacity: 0.8; }
+      15% { opacity: 0.1; }
+      20% { opacity: 1; }
+      100% { opacity: 0.9; }
+    }
+
+    .flicker {
+      animation: flicker 2s infinite;
+    }
+
+    .container {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-10%, -50%);
+      text-align: center;
+    }
+
+    .image img {
+      height: 250px;
+      opacity: 0.9;
+    }
+
+    .text-list {
+      margin-top: 10px;
+      line-height: 1.8;
+      font-size: 1.1em;
+    }
+
+    .text-list a {
+      color: white;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .text-list a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Girl Image + Text -->
+  <div class="container">
+    <div class="image">
+      <img src="https://i.postimg.cc/2yrs6ZXL/IMG-5175.jpg" alt="Anime Girl" />
+    </div>
+    <div class="text-list flicker">
+      <div>
+        <a href="https://www.tiktok.com/@offwockk?_t=ZN-8y3haNXa2Mg&_r=1" target="_blank" rel="noopener noreferrer">Kt</a>
+      </div>
+      <div>
+        <a href="https://www.tiktok.com/@joexotic198?_t=ZN-8y3hby3FJSA&_r=1" target="_blank" rel="noopener noreferrer">Joexotic198</a>
+      </div>
+      <div>
+        <a href="https://www.tiktok.com/@swagboyglo?_t=ZN-8y3hh3ryR5a&_r=1" target="_blank" rel="noopener noreferrer">Glo</a>
+      </div>
+      <div>
+        <a href="https://www.tiktok.com/@fncreatorflame?_t=ZN-8y3hjKBla4M&_r=1" target="_blank" rel="noopener noreferrer">Mist</a>
+      </div>
+      <div>
+        <a href="https://www.tiktok.com/@clapatron500?_t=ZN-8y3hknM7qwo&_r=1" target="_blank" rel="noopener noreferrer">Gibil</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Buzz Audio -->
+  <audio autoplay loop id="buzzAudio">
+    <source src="https://cdn.pixabay.com/download/audio/2021/08/08/audio_5fc5207f0d.mp3?filename=static-noise-ambience-6397.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    window.addEventListener("load", () => {
+      const audio = document.getElementById("buzzAudio");
+      audio.volume = 0.3;
+    });
+  </script>
+
+</body>
+</html>
